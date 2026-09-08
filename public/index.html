@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Spicy Spot | Student Biryani Delivery</title>
+  <meta name="description" content="Spicy Spot chicken dum biryani and plain biryani rice delivered to your classroom.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Spicy Spot home">
+        <span class="brand-mark">🌶️</span>
+        <span>Spicy <b>Spot</b></span>
+      </a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO SPICY SPOT</p>
+        <h1>Hot Biryani.<br><span>Right to Your Classroom.</span></h1>
+        <p class="hero-text">Fresh, filling and student-friendly. Order before 11:00 AM and get your lunch delivered to your room.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#order">Order Now</a>
+          <a class="btn btn-light" href="#menu">View Menu</a>
+        </div>
+        <div class="trust-row">
+          <div><strong>₹130</strong><small>Dum Biryani</small></div>
+          <div><strong>₹120</strong><small>Plain Biryani</small></div>
+          <div><strong>12:50 PM</strong><small>Target delivery</small></div>
+        </div>
+      </div>
+      <div class="poster-wrap">
+        <img src="/assets/spicy-spot-poster.png" alt="Spicy Spot food delivery poster">
+        <div class="delivery-badge">🛵 <b>Classroom Delivery</b><span>Simple • Fresh • On time</span></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container feature-grid">
+        <div><span>⭐</span><div><b>Great Taste</b><small>Made for hungry students</small></div></div>
+        <div><span>🛡️</span><div><b>Hygienic & Safe</b><small>Packed with care</small></div></div>
+        <div><span>⏰</span><div><b>On Time</b><small>Lunch without the walk</small></div></div>
+        <div><span>🎓</span><div><b>Student Friendly</b><small>Affordable portions</small></div></div>
+      </div>
+    </section>
+
+    <section id="menu" class="section container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TODAY'S MENU</p>
+          <h2>Only the good stuff.</h2>
+        </div>
+        <p>Two simple choices. No confusion.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="food-card">
+          <div class="food-image"><img src="/assets/dum-biryani.jpg" alt="Chicken Dum Biryani"></div>
+          <div class="food-info">
+            <div class="food-title"><h3>Chicken Dum Biryani</h3><span>₹130</span></div>
+            <p>Fragrant basmati rice, spicy masala and tender chicken, slow-cooked dum style.</p>
+            <button class="btn btn-primary choose-btn" data-item="dum">Order this</button>
+          </div>
+        </article>
+        <article class="food-card">
+          <div class="food-image"><img src="/assets/plain-biryani-rice.jpg" alt="Plain Biryani Rice"></div>
+          <div class="food-info">
+            <div class="food-title"><h3>Plain Biryani Rice</h3><span>₹120</span></div>
+            <p>Light, aromatic biryani rice with spices and herbs. Perfect for a simple lunch.</p>
+            <button class="btn btn-primary choose-btn" data-item="plain">Order this</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="order" class="order-section">
+      <div class="container order-layout">
+        <div class="order-intro">
+          <p class="eyebrow">QUICK ORDER</p>
+          <h2>Tell us where to deliver.</h2>
+          <p>Enter your details below. Your order will appear instantly on the Spicy Spot admin dashboard.</p>
+          <div class="order-note">📌 <b>Tip:</b> Give the correct room number and phone number so we can find you quickly.</div>
+        </div>
+
+        <form id="orderForm" class="order-form">
+          <div class="form-row">
+            <label>Customer name<input name="name" required maxlength="80" placeholder="Your full name"></label>
+            <label>Phone number<input name="phone" required maxlength="30" inputmode="tel" placeholder="10-digit phone number"></label>
+          </div>
+          <label>Room number / location<input name="room" required maxlength="60" placeholder="Example: BBA 1, Room 204"></label>
+          <div class="cart-order-box">
+            <div class="cart-order-head"><b>Your Cart</b><span>You can order both</span></div>
+            <div id="cartItems" class="cart-items"><p class="cart-empty">Add food from the menu above.</p></div>
+            <div class="total-line"><span>Total</span><strong id="total">₹0</strong></div>
+          </div>
+          <button class="btn btn-primary btn-large" type="submit" id="submitBtn">Place Order</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <div>
+        <p class="eyebrow">SPICY SPOT</p>
+        <h2>Eat well. Study well. 🌶️</h2>
+      </div>
+      <div class="contact-box">
+        <b>Student Food Delivery</b>
+        <span>Order before 11:00 AM</span>
+        <span>Classroom delivery around 12:50 PM</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Spicy Spot</span>
+      <span>Made for students • Freshly packed</span>
+    </div>
+  </footer>
+  <div id="cartBar" class="cart-bar" aria-live="polite">
+    <div><b id="cartCount">0</b> item(s) in cart <strong id="barTotal">₹0</strong></div>
+    <button id="cartBarButton" type="button">View Cart</button>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

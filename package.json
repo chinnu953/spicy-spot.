@@ -1,0 +1,14 @@
+{
+  "name": "spicy-spot-food-delivery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Spicy Spot student-friendly biryani ordering website with live admin notifications.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}

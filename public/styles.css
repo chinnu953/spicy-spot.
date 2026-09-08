@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap');
+
+:root{
+  --ink:#151515; --muted:#666; --cream:#fff9f1; --paper:#fff;
+  --orange:#e9471c; --orange2:#ff7a1a; --line:#eadfd3; --green:#176b3b;
+  --shadow:0 18px 50px rgba(34,20,10,.10);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:"DM Sans",Arial,sans-serif;background:var(--cream)}
+img{max-width:100%;display:block} a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1140px,92%);margin:auto}
+.site-header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;gap:30px}
+.brand{font-size:25px;font-weight:700;display:flex;align-items:center;gap:9px}
+.brand b{color:var(--orange)}
+.brand-mark{font-size:22px}
+nav{display:flex;gap:25px;margin-left:auto;font-size:14px;font-weight:600}
+nav a:hover,.admin-link:hover{color:var(--orange)}
+.admin-link{border:1px solid var(--line);padding:10px 15px;border-radius:999px;font-size:13px;font-weight:700}
+
+.hero{display:grid;grid-template-columns:1fr .92fr;gap:60px;align-items:center;padding:72px 0 65px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:2.4px;color:var(--orange);margin:0 0 14px}
+h1,h2,h3,p{margin-top:0}
+h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(46px,6vw,76px);line-height:.98;margin-bottom:24px;letter-spacing:-2px}
+h1 span{color:var(--orange)}
+.hero-text{color:var(--muted);font-size:17px;line-height:1.75;max-width:560px}
+.hero-actions{display:flex;gap:12px;margin:30px 0 35px}
+.btn{display:inline-flex;justify-content:center;align-items:center;border:0;cursor:pointer;border-radius:12px;padding:13px 20px;font-weight:800;transition:.2s transform,.2s box-shadow}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 9px 22px rgba(233,71,28,.2)}
+.btn-light{background:#fff;border:1px solid var(--line)}
+.btn-large{width:100%;padding:15px}
+.trust-row{display:flex;gap:34px}
+.trust-row div{display:grid;gap:3px}
+.trust-row strong{font-size:19px}.trust-row small{color:#777}
+.poster-wrap{position:relative}
+.poster-wrap img{width:100%;max-height:650px;object-fit:cover;object-position:center;border-radius:28px;box-shadow:var(--shadow);background:#111}
+.delivery-badge{position:absolute;bottom:22px;left:-20px;background:#fff;padding:14px 18px;border-radius:15px;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;column-gap:10px}
+.delivery-badge:first-letter{font-size:20px}.delivery-badge span{grid-column:2;color:#777;font-size:12px}
+
+.features{background:#171717;color:#fff;padding:22px 0}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature-grid>div{display:flex;align-items:center;gap:12px;border-right:1px solid #383838;padding:8px 18px}
+.feature-grid>div:last-child{border-right:0}.feature-grid span{font-size:23px}
+.feature-grid b,.feature-grid small{display:block}.feature-grid small{color:#aaa;margin-top:3px}
+
+.section{padding:80px 0}
+.section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}
+.section-heading h2,.order-intro h2,.contact h2{font-family:"Playfair Display",Georgia,serif;font-size:43px;margin:0}
+.section-heading>p{color:#777;margin:0}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.food-card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #f0e5db}
+.food-image{height:310px;overflow:hidden;background:#ddd}.food-image img{width:100%;height:100%;object-fit:cover}
+.food-info{padding:24px}.food-title{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.food-title h3{font-size:22px;margin:0}.food-title span{font-size:23px;font-weight:800;color:var(--orange)}
+.food-info p{color:#777;line-height:1.6;min-height:52px}
+
+.order-section{background:#f0e4d6;padding:80px 0}
+.order-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.order-intro{padding-top:18px}.order-intro h2{margin-bottom:18px}.order-intro>p:not(.eyebrow){color:#6f665e;line-height:1.7}
+.order-note{margin-top:25px;background:#fff8ee;border:1px solid #e7d5c0;padding:15px;border-radius:14px;font-size:14px;line-height:1.5}
+.order-form{background:#fff;padding:28px;border-radius:24px;box-shadow:var(--shadow)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{display:grid;gap:7px;font-size:13px;font-weight:800;margin-bottom:16px}
+input,select,textarea{border:1px solid #ded4ca;border-radius:11px;padding:13px 14px;background:#fff;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(233,71,28,.08)}
+textarea{min-height:82px;resize:vertical}
+.total-line{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:18px 0;margin-top:4px;font-size:17px}.total-line strong{font-size:24px;color:var(--orange)}
+.form-status{text-align:center;margin:13px 0 0;font-weight:700;min-height:20px}.success{color:var(--green)}.error{color:#b32020}
+
+.contact{padding:65px 0;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.contact-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px;display:grid;gap:5px;min-width:310px}.contact-box span{color:#777;font-size:13px}
+footer{background:#151515;color:#aaa;padding:25px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between}
+
+@media(max-width:850px){
+  nav{display:none}.hero{grid-template-columns:1fr;gap:35px;padding-top:45px}
+  .poster-wrap{max-width:620px;margin:auto}.feature-grid{grid-template-columns:1fr 1fr}.feature-grid>div:nth-child(2){border-right:0}
+  .menu-grid,.order-layout{grid-template-columns:1fr}.section-heading{display:block}.section-heading>p{margin-top:10px}
+  .contact{display:block}.contact-box{margin-top:25px}
+}
+@media(max-width:560px){
+  .nav{height:65px}.admin-link{padding:8px 11px}.brand{font-size:21px}
+  .hero{padding-bottom:45px}.hero-actions{flex-direction:column}.trust-row{gap:18px;justify-content:space-between}
+  h1{font-size:48px}.feature-grid{grid-template-columns:1fr}.feature-grid>div{border-right:0;border-bottom:1px solid #383838;padding:10px 0}.feature-grid>div:last-child{border-bottom:0}
+  .food-image{height:240px}.form-row{grid-template-columns:1fr}.order-form{padding:20px}.section{padding:55px 0}
+  .footer-inner{display:grid;gap:8px}
+}
+
+/* Spicy Spot cart additions — original design preserved */
+.cart-order-box{border:1px solid var(--line);border-radius:16px;background:#fff8f1;padding:16px;margin:6px 0 18px}
+.cart-order-head{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:8px}
+.cart-order-head span{font-size:12px;color:#777}
+.cart-items{display:grid;gap:4px}
+.cart-empty{color:#777;margin:8px 0;font-size:14px}
+.cart-item-row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-item-row:last-child{border-bottom:0}
+.cart-item-row small{display:block;color:#777;margin-top:3px}
+.mini-stepper{display:flex;align-items:center;gap:8px}
+.mini-stepper button{width:32px;height:32px;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;font-weight:800}
+.mini-stepper b{min-width:18px;text-align:center}
+.cart-bar{position:fixed;left:0;right:0;bottom:0;background:#171717;color:#fff;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:12px max(4%,calc((100vw - 1140px)/2));box-shadow:0 -8px 30px rgba(0,0,0,.18)}
+.cart-bar strong{margin-left:12px;color:#ffb08e;font-size:18px}
+.cart-bar button{border:0;background:var(--orange);color:#fff;border-radius:10px;padding:11px 18px;font-weight:800;cursor:pointer}
+body{padding-bottom:72px}
+@media(max-width:560px){.cart-item-row{grid-template-columns:1fr auto}.cart-item-row>strong{grid-column:1/2}.cart-bar{padding:11px 4%;font-size:13px}.cart-bar button{padding:10px 13px}.cart-bar strong{font-size:16px}}
