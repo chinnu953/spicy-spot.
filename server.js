@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const sessions = new Set();
 
 const PRODUCTS = {
-  dum: { name: "Chicken Dum Biryani", price: 130 },
+  dum: { name: "Chicken Dum Biryani", price: 160 },
   plain: { name: "Plain Biryani Rice", price: 120 }
 };
 
