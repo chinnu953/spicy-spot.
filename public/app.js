@@ -1,6 +1,6 @@
-const prices = { dum: 120, plain: 90 };
-const names = { dum: "Chicken Dum Biryani", plain: "Plain Biryani Rice" };
-const cart = { dum: 0, plain: 0 };
+const prices = { dum: 120, plain: 90, fry: 170 };
+const names = { dum: "Chicken Dum Biryani", plain: "Plain Biryani Rice", fry: "Fry Piece Biryani" };
+const cart = { dum: 0, plain: 0, fry: 0 };
 const form = document.getElementById("orderForm");
 const totalEl = document.getElementById("total");
 const cartItemsEl = document.getElementById("cartItems");
@@ -73,7 +73,7 @@ form.addEventListener("submit", async e=>{
     if(!response.ok) throw new Error(result.error||"Could not place order.");
     statusEl.className="form-status success";
     statusEl.innerHTML=`✅ Order <b>${result.order.id}</b> received! Total: <b>${money(result.order.total)}</b>`;
-    cart.dum=0; cart.plain=0; renderCart(); form.reset();
+    cart.dum=0; cart.plain=0; cart.fry=0; renderCart(); form.reset();
   }catch(err){ statusEl.className="form-status error"; statusEl.textContent="❌ "+err.message; }
   finally{ submitBtn.disabled=false; }
 });
