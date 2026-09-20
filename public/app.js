@@ -1,4 +1,4 @@
-const prices = { dum: 120, plain: 100 };
+const prices = { dum: 120, plain: 90 };
 const names = { dum: "Chicken Dum Biryani", plain: "Plain Biryani Rice" };
 const cart = { dum: 0, plain: 0 };
 const form = document.getElementById("orderForm");
