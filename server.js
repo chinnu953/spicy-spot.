@@ -24,7 +24,8 @@ const sessions = new Set();
 
 const PRODUCTS = {
   dum: { name: "Chicken Dum Biryani", price: 160 },
-  plain: { name: "Plain Biryani Rice", price: 120 }
+  plain: { name: "Plain Biryani Rice", price: 120 },
+  fry: { name: "Fry Piece Biryani", price: 170 }
 };
 
 function readOrders() {
